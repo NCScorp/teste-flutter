@@ -16,7 +16,7 @@ jobs:
           channel: 'stable'
       - run: echo "Iniciando build web"
       - run: ls -lah
-      - run: cd teste-flutter/app
+      - run: cd app
       - run: pwd
       - run: flutter build web
       - run: ls build/web
