@@ -6,8 +6,6 @@ on:
 jobs:
   build:
     name: Build Web
-    env:
-      my_secret: ${{secrets.commit_secret}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,3 +20,9 @@ jobs:
           ls -lah
           flutter build web
           ls build/web
+      
+      - name: deploy to s3
+        run: |
+          pwd
+          ls buid/web
+    
