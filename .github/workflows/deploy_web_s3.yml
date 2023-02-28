@@ -23,7 +23,8 @@ jobs:
       
       - name: deploy to s3
         run: |
+          pwd
           ls 
           cd app
-          ls buid/web
+          ls
     
