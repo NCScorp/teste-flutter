@@ -18,5 +18,6 @@ jobs:
       - run: ls -lah
       - run: cd app
       - run: pwd
+      - run: ls -lah
       - run: flutter build web
       - run: ls build/web
