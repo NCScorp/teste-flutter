@@ -21,12 +21,11 @@ jobs:
           flutter build web
           ls build/web
       
-      - name: deploy to s3
-        uses: shallwefootball/s3-upload-action@master
+      - uses: shallwefootball/s3-upload-action@master
+        name: deploy to s3
         id: S3
         with:
           aws_key_id: ${{secrets.AWS_KEY_ID}}
           aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-          aws_bucket: arquitetura-api-docs
-          source_dir: app/build/web
-    
+          aws_bucket: 'arquitetura-api-docs'
+          source_dir: 'app/build/web'
